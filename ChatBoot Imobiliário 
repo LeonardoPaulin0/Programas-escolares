@@ -1,0 +1,188 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/LeonardoPaulin0/Programas-escolares/blob/main/ChatBoot%20Imobili%C3%A1rio%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "havD0SgbPpXS",
+        "outputId": "5e69d377-f48b-4fe9-c3cb-13b73b25e12c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/\n",
+            "Requirement already satisfied: chatterbot==1.0.0 in /usr/local/lib/python3.9/dist-packages (1.0.0)\n",
+            "Requirement already satisfied: python-dateutil<2.8,>=2.7 in /usr/local/lib/python3.9/dist-packages (from chatterbot==1.0.0) (2.7.5)\n",
+            "Requirement already satisfied: chatterbot-corpus<1.3,>=1.2 in /usr/local/lib/python3.9/dist-packages (from chatterbot==1.0.0) (1.2.0)\n",
+            "Requirement already satisfied: mathparse<0.2,>=0.1 in /usr/local/lib/python3.9/dist-packages (from chatterbot==1.0.0) (0.1.2)\n",
+            "Requirement already satisfied: pymongo<4.0,>=3.3 in /usr/local/lib/python3.9/dist-packages (from chatterbot==1.0.0) (3.13.0)\n",
+            "Requirement already satisfied: sqlalchemy<1.3,>=1.2 in /usr/local/lib/python3.9/dist-packages (from chatterbot==1.0.0) (1.2.19)\n",
+            "Requirement already satisfied: pint>=0.8.1 in /usr/local/lib/python3.9/dist-packages (from chatterbot==1.0.0) (0.20.1)\n",
+            "Requirement already satisfied: nltk<4.0,>=3.2 in /usr/local/lib/python3.9/dist-packages (from chatterbot==1.0.0) (3.8.1)\n",
+            "Requirement already satisfied: PyYAML<4.0,>=3.12 in /usr/local/lib/python3.9/dist-packages (from chatterbot-corpus<1.3,>=1.2->chatterbot==1.0.0) (3.13)\n",
+            "Requirement already satisfied: tqdm in /usr/local/lib/python3.9/dist-packages (from nltk<4.0,>=3.2->chatterbot==1.0.0) (4.65.0)\n",
+            "Requirement already satisfied: click in /usr/local/lib/python3.9/dist-packages (from nltk<4.0,>=3.2->chatterbot==1.0.0) (8.1.3)\n",
+            "Requirement already satisfied: joblib in /usr/local/lib/python3.9/dist-packages (from nltk<4.0,>=3.2->chatterbot==1.0.0) (1.1.1)\n",
+            "Requirement already satisfied: regex>=2021.8.3 in /usr/local/lib/python3.9/dist-packages (from nltk<4.0,>=3.2->chatterbot==1.0.0) (2022.10.31)\n",
+            "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil<2.8,>=2.7->chatterbot==1.0.0) (1.16.0)\n"
+          ]
+        }
+      ],
+      "source": [
+        "pip install chatterbot==1.0.0"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 779
+        },
+        "id": "kbYgQGGzLBGI",
+        "outputId": "a5ac9608-d14b-44ae-ba24-d1496c1c1f99"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "[nltk_data] Downloading package averaged_perceptron_tagger to\n",
+            "[nltk_data]     /root/nltk_data...\n",
+            "[nltk_data]   Package averaged_perceptron_tagger is already up-to-\n",
+            "[nltk_data]       date!\n",
+            "[nltk_data] Downloading package punkt to /root/nltk_data...\n",
+            "[nltk_data]   Package punkt is already up-to-date!\n",
+            "[nltk_data] Downloading package stopwords to /root/nltk_data...\n",
+            "[nltk_data]   Package stopwords is already up-to-date!\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n",
+            "List Trainer: [####################] 100%\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-5-503ee1bfa049>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m     41\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     42\u001b[0m \u001b[0;32mwhile\u001b[0m \u001b[0;32mTrue\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 43\u001b[0;31m     \u001b[0mquest\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'Você: '\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     44\u001b[0m     \u001b[0mresponse\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mbot\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_response\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mquest\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     45\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mfloat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mresponse\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mconfidence\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m>=\u001b[0m\u001b[0;36m0.0005\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.9/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m    858\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    859\u001b[0m             )\n\u001b[0;32m--> 860\u001b[0;31m         return self._input_request(str(prompt),\n\u001b[0m\u001b[1;32m    861\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    862\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_header\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.9/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    902\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    903\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 904\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    905\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    906\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "\n",
+        "#-*- coding: utf-8 -*-\n",
+        "from chatterbot import ChatBot\n",
+        "from chatterbot.trainers import ListTrainer\n",
+        "\n",
+        "bot = ChatBot('Imobiliario')\n",
+        "\n",
+        "convI = ['Olá','Olá, posso ajudar?','Oi','Oi, posso ajudar?','Tudo bem com você?','Comigo tudo bem!','Boa tarde','Boa tarde, posso ajudar?','Bom dia','Bom dia, posso ajudar?','Boa noite','Boa noite, posso ajudar?'] \n",
+        "convSalao = ['Preciso de um salão comercial para alugar','Estão disponiveis 2 salões no momento para aluguel, salão numero 120 no bairro E, salão numero 210 no Bairro J. degite o número do salão e o bairro para mais detalhes','Salão comercial','Estão disponiveis 2 salões no momento para aluguel, salão numero 120 no bairro E, salão numero 210 no Bairro J. degite o número do salão e o bairro para mais detalhes','Salão comercial para alugar','Estão disponiveis 2 salões no momento para aluguel, salão numero 120 no bairro E, salão numero 210 no Bairro J. degite o número do salão e o bairro para mais detalhes']\n",
+        "convAluguel = ['Preciso de uma casa para alugar','Estão disponiveis 3 casas no momento para aluguel, casa numero 1 no bairro A, casa numero 2 no Bairro B, casa numero 3 no bairro C. degite o número da casa e o bairro para mais detalhes','Casas para alugar','Estão disponiveis 3 casas no momento para aluguel, casa numero 1 no bairro A, casa numero 2 no Bairro B, casa numero 3 no bairro C. degite o número da casa e o bairro para mais detalhes']\n",
+        "convVenda = ['Preciso de uma casa para comprar','Estão disponiveis 2 casas no momento para venda, casa numero 530 no bairro F, casa numero 340 no Bairro G. degite o número da casa e o bairro para mais detalhes','Casas á venda','Estão disponiveis 2 casas no momento para venda, casa numero 530 no bairro F, casa 340 no Bairro G. degite o número da casa e o bairro para mais detalhes','Casas para comprar','Estão disponiveis 2 casas no momento para venda, casa numero 530 no bairro F, casa numero 340 no Bairro G. degite o número da casa e o bairro para mais detalhes']\n",
+        "descriCasaA = ['Casa numero 1 no bairro A','O imovel para alugar no valor de R$1600/mês. possui 3 quartos sendo 1 suite, sala, cozinha, banheiro social, quintal e 2 vagas na garagem, para marcar uma visita, digite o nome do imovel, o numero, o bairro e por ultimo \"marcar uma visita\"']\n",
+        "descriCasaB = ['Casa numero 2 no bairro B','O imovel para alugar no valor de R$1400/mês. possui 2 quartos, sala, copa, cozinha, banheiro, quintal e 1 vaga na garagem, para marcar uma visita, digite o nome do imovel, o numero, o bairro e por ultimo \"marcar uma visita\"']\n",
+        "descriCasaC = ['casa numero 3 no bairro C','O imovel para alugar no valor de R$1800/mês possui 2 quartos sendo um com suite, sala, cozinha, área de churrasco, quintal e 2 vagas na garagem, para marcar uma visita, digite o nome do imovel, o numero, o bairro e por ultimo \"marcar uma visita\"']   \n",
+        "descriCasaVendaF = ['Casa numero 530 no bairro F','O imovel para vanda esta no valor de R$250 mil. possui 3 quartos sendo 1 suite, sala, cozinha, banheiro social, área de churrasco, quintal e 2 vagas na garagem, para marcar uma visita, digite o nome do imovel, o numero e o bairro, por ultimo \"marcar uma visita\"']\n",
+        "descriCasaVendaG = ['Casa numero 340 no bairro G','O imovel esta a venda por R$300 mil. possui 3 quartos sendo 1 suite, sala, cozinha, 2 banheiros social, quintal e 2 vagas na garagem, para marcar uma visita, digite o nome do imovel, o numero, o bairro e por ultimo \"marcar uma visita\"']\n",
+        "descriSalaoE = ['Salão numero 120 no bairro E','O Salao comercial com o valor de R$800/mês possui 45 metros quadrado com um banheiro social, para marcar uma visita, digite o nome do imovel, o numero, o bairro e por ultimo \"marcar uma visita\"']\n",
+        "descriSalaoJ = ['Salão numero 210 no bairro J','O Salão comercial com aluguel de R$12000/mês possui 85 metros quadrados, 2 banheiros masculino e feminino, 10 prateleiras para produtos, 2 balcao de vendas, para marcar uma visita, digite o nome do imovel, o numero, o bairro e por ultimo \"marcar uma visita\"']\n",
+        "marcarVisitaSalao = ['Salão numero 120 no bairro E marcar uma visita','otimo! irei entrar em contato para te enviar a hora e a data corretas','Salão numero 210 no bairro J marcar uma visita','otimo! irei entrar em contato para te enviar a hora e a data corretas']\n",
+        "marcarVisitaCasaA = ['Casa numero 1 no bairro A marcar uma visita','otimo! irei entrar em contato para te enviar a hora e a data corretas','Casa numero 2 no bairro B marcar uma visita','otimo! irei entrar em contato para te enviar a hora e a data corretas','Casa numero 3 no bairro C marcar uma visita','otimo! irei entrar em contato para te enviar a hora e a data corretas']\n",
+        "marcarVisitaCasaV = ['Casa numero 530 no bairro F marcar uma visita', 'otimo! irei entrar em contato para te enviar a hora e a data corretas','Casa numero 340 no bairro G marcar uma visita','otimo! irei entrar em contato para te enviar a hora e a data corretas']\n",
+        "agradecendo = ['Obrigado pelo atendimento','Denada, volte sempre!!','Obrigada pelo atendimento','Denada, volte sempre!!','Muito Obrigado','Por nada, volte sempre!!','Muito Obrigada','Por nada, volte sempre!!','Obrigado','Denada, volte sempre!!','Obrigada','Denada, volte sempre!!']\n",
+        "\n",
+        "trainer = ListTrainer(bot)\n",
+        "\n",
+        "trainer.train(convI)\n",
+        "trainer.train(convSalao)\n",
+        "trainer.train(convVenda)\n",
+        "trainer.train(convAluguel)\n",
+        "trainer.train(descriCasaA)\n",
+        "trainer.train(descriCasaB)\n",
+        "trainer.train(descriCasaC)\n",
+        "trainer.train(descriCasaVendaF)\n",
+        "trainer.train(descriCasaVendaG)\n",
+        "trainer.train(descriSalaoE)\n",
+        "trainer.train(descriSalaoJ)\n",
+        "trainer.train(marcarVisitaSalao)\n",
+        "trainer.train(marcarVisitaCasaA)\n",
+        "trainer.train(marcarVisitaCasaV)\n",
+        "trainer.train(agradecendo)\n",
+        "\n",
+        "\n",
+        "while True:\n",
+        "    quest = input('Você: ')\n",
+        "    response = bot.get_response(quest)\n",
+        "    if float(response.confidence)>=0.0005:\n",
+        "        print('Bot: ', response)\n",
+        "    else:\n",
+        "        print('Bot: Desculpe, não entendi, por favor refaça a pergunta.')"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPFWjknA+oNiRsmI4t3SQ1e",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
