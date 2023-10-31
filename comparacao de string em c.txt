@@ -1,0 +1,7 @@
+char nome1[50], nome2[50];
+    int comparacao;
+    printf("\nDigite o nome 1: ");
+    gets(nome1);
+    printf("\nDigite o nome 2: ");
+    gets(nome2);
+    comparacao=strcmp(nome1,nome2);

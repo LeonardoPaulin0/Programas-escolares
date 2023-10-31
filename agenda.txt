@@ -1,0 +1,125 @@
+#include <iostream>
+#include <string.h>
+#define MAX 10
+
+using namespace std;
+
+
+typedef struct SContato{
+    char nome[50];
+    char telefone[30];
+}TContato;
+
+typedef struct SAgenda{
+    TContato elementos[MAX];
+    int fim;
+}TAgenda;
+
+
+int inserir (TAgenda *a, TContato c)
+{
+    int i;
+    if (a->fim>(MAX-2))
+        return 1;
+
+    a->fim=a->fim+1;
+    for (i=a->fim;strcmp(a->elementos[i-1].nome,c.nome)>0;i--)
+        a->elementos[i]=a->elementos[i-1];
+    a->elementos[i]=c;
+    return 0;
+}
+
+
+int remover (TAgenda *a, int p)
+{
+    if (a->fim<0)
+        return 1;
+    if ((p<0) || (p>a->fim))
+        return 2;
+    for (int i=p;i<a->fim;i++)
+        a->elementos[i]=a->elementos[i+1];
+    a->fim=a->fim-1;
+    return 0;
+}
+
+void impressao (TAgenda a)
+{
+    system("cls");
+    printf("* * * * *   L I S T A   * * * * *\n\n");
+    if (a.fim<0)
+        printf("\n\nLista vazia...\n\n");
+    else
+    {
+        for (int i=0;i<=a.fim;i++)
+        {
+            printf("\n%s\t%s  ",a.elementos[i].nome,a.elementos[i].telefone);
+        }
+
+    }
+    printf("\n\n");
+    system("pause");
+}
+
+
+int main()
+{
+    TAgenda agenda;
+    TContato contato;
+    int posicao, op, flag;
+    agenda.fim=-1;
+
+    do
+    {
+        system("cls");
+        printf("* * * * *   M E N U   * * * * *\n\n\n");
+        printf("\n1 - Inserir");
+        printf("\n2 - Remover");
+        printf("\n3 - Imprimir");
+        printf("\n9 - Sair");
+        printf("\n\nDigite a sua opcao: ");
+        scanf("%d",&op);
+
+        switch(op)
+        {
+            case 1: system("cls");
+                    printf("* * * *   I N S E R I R   * * * *\n\n");
+                    printf("\nDigite o nome a ser inserido: ");
+                    fflush(stdin);
+                    gets(contato.nome);
+                    printf("\nDigite o telefone a ser inserido: ");
+                    fflush(stdin);
+                    gets(contato.telefone);
+                    flag = inserir(&agenda,contato);
+                    if (flag==0)
+                        printf("\n\nElemento inserido com sucesso!!\n\n");
+                    else
+                        if (flag==1)
+                            printf("\n\n Impossivel inserir, lista cheia!\n\n");
+                        else
+                            printf("\n\nImpossivel inserir, posicao invalida.\n\n");
+                    system("pause");
+                    break;
+
+            case 2: system("cls");
+                    printf("* * * *   R E M O V E R   * * * *\n\n");
+                    printf("\nDigite a posicao do elemento a ser removido entre [0] e [%d]: ",agenda.fim);
+                    scanf("%d",&posicao);
+                    flag = remover(&agenda,posicao);
+                     if (flag==0)
+                        printf("\n\nElemento removido com sucesso!!\n\n");
+                    else
+                        if (flag==1)
+                            printf("\n\n Impossivel remover, lista vazia!\n\n");
+                        else
+                            printf("\n\nImpossivel remover, posicao invalida.\n\n");
+                    system("pause");
+                    break;
+
+            case 3: impressao(agenda);
+                    break;
+        }
+
+
+    }while(op!=9);
+    return 0;
+}
